@@ -2,13 +2,29 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import background from './public/images/background.png';
+import { Invitation } from './features/invitation/Invitation';
+
 
 function App() {
+
+  const styles = {
+    container: {
+        backgroundImage: `url(${background})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        width: '100vw',
+        height: '100vh'
+    }
+};
+  
   return (
-    <div className="App">
+    <div className="Login-component">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
+        {/* <Counter />  */}
+        <Invitation/>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
